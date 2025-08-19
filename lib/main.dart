@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
+              Image.network(
+                'https://qcloud.dpfile.com/pc/TrdZpLN1zkXDV4oN2FH98LdVnvHj694NKQu0_KA3ul4eYxZWRPQ7CJuw-PqyZBS4.jpg',
+                width: 200,
+                height: 200,
+                fit: BoxFit.cover,
+              ),
               Text(
                 "欢迎使用",
                 style: TextStyle(
@@ -26,12 +32,6 @@ class MyApp extends StatelessWidget {
                   fontSize: 50,
                   letterSpacing: 10,
                 ),
-              ),
-              Image.network(
-                'https://qcloud.dpfile.com/pc/TrdZpLN1zkXDV4oN2FH98LdVnvHj694NKQu0_KA3ul4eYxZWRPQ7CJuw-PqyZBS4.jpg',
-                width: 200,
-                height: 200,
-                fit: BoxFit.cover,
               ),
               Icon(Icons.ac_unit_sharp, color: Colors.yellow, size: 50),
               ElevatedButton.icon(
