@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class ChooseLocation extends StatefulWidget {
   const ChooseLocation({super.key});
@@ -13,9 +12,13 @@ class _ChooseLocationState extends State<ChooseLocation> {
   int counter = 0;
 
   void getData() async {
-    await Future.delayed(Duration(seconds: 3), () => {print("hello chen")});
-
-    await Future.delayed(Duration(seconds: 2), () => {print('a coder')});
+    http.get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1')).then((
+      response,
+    ) {
+      print("状态码: ${response.statusCode}");
+      print("响应头: ${response.headers}");
+      print("响应体: ${response.body}");
+    });
   }
 
   @override
