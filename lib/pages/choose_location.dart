@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class ChooseLocation extends StatefulWidget {
@@ -10,10 +12,17 @@ class ChooseLocation extends StatefulWidget {
 class _ChooseLocationState extends State<ChooseLocation> {
   int counter = 0;
 
+  void getData() async {
+    await Future.delayed(Duration(seconds: 3), () => {print("hello chen")});
+
+    await Future.delayed(Duration(seconds: 2), () => {print('a coder')});
+  }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    getData();
   }
 
   @override
